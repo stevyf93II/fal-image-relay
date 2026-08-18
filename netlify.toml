@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+# Prompted at deploy time when using the Deploy to Netlify button.
+[template.environment]
+  FAL_KEY = "Your fal.ai API key (fal.ai -> dashboard -> keys)"
+  RELAY_PASS = "Shared passphrase every client must send in the x-relay-pass header"
