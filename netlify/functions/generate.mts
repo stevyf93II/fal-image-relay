@@ -23,7 +23,12 @@ export default async (req: Request, context: Context) => {
   const auth = { "Authorization": `Key ${falKey}`, "Content-Type": "application/json" };
 
   if (body.action === "submit") {
-    const model = typeof body.model === "string" && /^[a-z0-9\-\/]+$/.test(body.model)
+    // Model id validation: lower-case alphanumerics plus . _ - / — dots are
+    // required because real fal model ids carry version numbers
+    // (e.g. "xai/grok-imagine-image/v2.0/text-to-image"). Without the dot the
+    // regex silently rejected such ids and fell back to fal-ai/flux/dev, so a
+    // caller asking for a versioned model got a different model billed instead.
+    const model = typeof body.model === "string" && /^[a-z0-9._\-\/]+$/.test(body.model)
       ? body.model : "fal-ai/flux/dev";
 
     // Optional model allowlist: set ALLOWED_MODELS to a comma-separated list
