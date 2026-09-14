@@ -1,5 +1,7 @@
 # fal-image-relay
 
+[![CI](https://github.com/stevyf93II/fal-image-relay/actions/workflows/ci.yml/badge.svg)](https://github.com/stevyf93II/fal-image-relay/actions/workflows/ci.yml)
+
 Your own image-generation endpoint — any model in the [fal.ai](https://fal.ai) catalog, one URL, one passphrase, deployable free on Netlify in minutes.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stevyf93II/fal-image-relay)
@@ -66,6 +68,14 @@ Most text-to-image and image-to-image models return `images: [{url, width, heigh
 **Errors:** `401` bad or missing passphrase, `403` model not in your allowlist, `400` malformed JSON / unknown action / non-fal poll URL, `405` non-POST. fal's own errors pass through with fal's status codes — a `422` usually means a parameter mismatch for that model family (some take `image_size`, others take `aspect_ratio`).
 
 See [`examples/`](examples/) for a copy-paste curl script, a Python helper, and an iOS Shortcut recipe.
+
+## Tests
+
+```
+npm test
+```
+
+Twelve `node:test` cases run the function with `Netlify.env` and `fetch` stubbed — no network, no real keys. They cover the passphrase gate, control-key stripping, text-to-image defaults, versioned model ids, the `ALLOWED_MODELS` allowlist, and the poll SSRF guard. Requires Node 22.6+ (uses `--experimental-strip-types` to load the `.mts` function directly).
 
 ## Security notes, honestly
 
