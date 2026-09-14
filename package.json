@@ -1,0 +1,14 @@
+{
+  "name": "fal-image-relay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Your own image-generation endpoint for the fal.ai catalog - one Netlify function, one passphrase",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MIT"
+}
