@@ -92,6 +92,10 @@ This exact function fronts my own AI assistant's image-generation ability in dai
 
 More of my live projects: [craftmyresume.ai](https://craftmyresume.ai) · [getlotworth.com](https://getlotworth.com) · [arklatexrv.com](https://arklatexrv.com) · [docdrop](https://github.com/stevyf93II/docdrop)
 
+## More from the same author
+
+[Vista](https://github.com/stevyf93II/vista): iOS LiDAR room scanner · [swift-tsdf](https://github.com/stevyf93II/swift-tsdf): TSDF fusion and marching cubes in Swift · [feedmerge](https://github.com/stevyf93II/feedmerge): vendor feed to versioned JSON catalog · [catalog-mcp](https://github.com/stevyf93II/catalog-mcp): MCP server for any JSON catalog · [docdrop](https://github.com/stevyf93II/docdrop): append-only Google Docs for AI memory
+
 ## License
 
 MIT
