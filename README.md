@@ -90,7 +90,7 @@ This is a shared-passphrase gate, not an enterprise auth system. What that buys 
 
 This exact function fronts my own AI assistant's image-generation ability in daily production — every image it makes for me goes through this relay on my Netlify account.
 
-More of my live projects: [craftmyresume.ai](https://craftmyresume.ai) · [getlotworth.com](https://getlotworth.com) · [arklatexrv.com](https://arklatexrv.com) · [docdrop](https://github.com/stevyf93II/docdrop)
+More of my live projects: [craftmyresume.ai](https://craftmyresume.ai) · [getlotworth.com](https://getlotworth.com) · [docdrop](https://github.com/stevyf93II/docdrop)
 
 ## More from the same author
 
